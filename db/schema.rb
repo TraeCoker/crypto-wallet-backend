@@ -10,12 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_30_214913) do
+ActiveRecord::Schema.define(version: 2021_12_01_000624) do
+
+  create_table "snapshots", force: :cascade do |t|
+    t.integer "wallet_id"
+    t.decimal "bitcoin"
+    t.decimal "ethereum"
+    t.decimal "binancecoin"
+    t.decimal "tether"
+    t.decimal "cardano"
+    t.decimal "solana"
+    t.decimal "xrp"
+    t.decimal "polkadot"
+    t.decimal "shibainu"
+    t.decimal "dogecoin"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "wallets", force: :cascade do |t|
+    t.integer "user_id"
+    t.decimal "bitcoin"
+    t.decimal "ethereum"
+    t.decimal "binancecoin"
+    t.decimal "tether"
+    t.decimal "cardano"
+    t.decimal "solana"
+    t.decimal "xrp"
+    t.decimal "polkadot"
+    t.decimal "shibainu"
+    t.decimal "dogecoin"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
