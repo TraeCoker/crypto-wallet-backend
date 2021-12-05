@@ -1,5 +1,5 @@
 class WalletSerializer < ActiveModel::Serializer
-  attributes :id, :bitcoin, :ethereum, :binancecoin, :tether, :cardano, :solana, :xrp, :polkadot, :shibainu, :dogecoin
-  
+  attributes :id, :bitcoin, :ethereum, :tether, :cardano, :solana
+
   has_many :snapshots
 end
