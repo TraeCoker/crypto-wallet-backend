@@ -11,4 +11,9 @@ class Wallet < ApplicationRecord
         self.cardano = 0
         self.solana = 0
     end 
+
+    def calculate_snapshot(current_prices)
+        
+    end 
+
 end
