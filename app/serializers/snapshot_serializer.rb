@@ -1,3 +1,3 @@
 class SnapshotSerializer < ActiveModel::Serializer
-  attributes :id, :bitcoin, :ethereum, :binancecoin, :tether, :cardano, :solana, :xrp, :polkadot, :shibainu, :dogecoin, :created_at
+  attributes :id, :bitcoin, :ethereum, :tether, :cardano, :solana, :created_at
 end
