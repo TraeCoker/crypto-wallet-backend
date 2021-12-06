@@ -9,6 +9,7 @@ class CreateWallets < ActiveRecord::Migration[6.1]
       t.decimal :solana
 
 
+
       t.timestamps
     end
   end
