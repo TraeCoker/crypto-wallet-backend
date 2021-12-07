@@ -19,8 +19,12 @@ class Wallet < ApplicationRecord
         #tether = current_prices["tether"] * self.tether 
         #cardano = current_prices["cardano"] * self.cardano
         #colana = current_prices["solana"] * self.solana
+        now = Time.now.to_i * 1000
 
-        self.snapshots.build(bitcoin: 0, ethereum: 0, tether: 0, cardano: 0, solana: 0).save
+        snapshot = self.snapshots.build(bitcoin: self.bitcoin, ethereum: self.ethereum, 
+                    tether: self.tether, cardano: self.cardano, 
+                    solana: self.solana, unix: now)
+        snapshot.save
     end 
 
 end
