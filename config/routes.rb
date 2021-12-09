@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  resources :snapshots
-  resources :wallets
+  patch 'wallet/:id', to: 'wallet#update'
   resources :users, only: [:create]
       post '/login', to: 'auth#create'
       get '/profile', to: 'users#profile'
