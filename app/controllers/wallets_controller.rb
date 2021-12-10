@@ -3,7 +3,8 @@ class WalletsController < ApplicationController
         @wallet = Wallet.find(params[:id])
         coin = params[:wallet][:coin]
         total = params[:wallet][:total]
-        @wallet.increment!(coin, total)
+        @wallet.increment(coin, total)
+        @wallet.save
 
         render json: @wallet, include: :snapshots
     end 
