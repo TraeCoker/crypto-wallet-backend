@@ -5,8 +5,9 @@ class WalletsController < ApplicationController
         total = params[:wallet][:total]
         @wallet.increment(coin, total)
         @wallet.save
+        @snapshot = @wallet.snapshots.last
 
-        render json: @wallet, include: :snapshots
+        render json: { wallet: WalletSerializer.new(@wallet), snapshot: SnapshotSerializer.new(@snapshot)}
     end 
 
 
