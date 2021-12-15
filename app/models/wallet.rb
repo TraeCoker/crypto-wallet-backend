@@ -1,6 +1,6 @@
 class Wallet < ApplicationRecord
     before_create :set_defaults
-    after_create :create_snapshot
+    
     after_save :create_snapshot
 
     belongs_to :user 
