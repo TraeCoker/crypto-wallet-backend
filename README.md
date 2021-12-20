@@ -1,24 +1,5 @@
-# README
+# CryptoXchange Backend
+For installation and usage visit https://github.com/TraeCoker/crypto-wallet-frontend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<img width="866" alt="1" src="https://user-images.githubusercontent.com/79291960/146821646-1967c1f7-670b-43b1-b1f6-34f1bf7975a1.PNG">
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
