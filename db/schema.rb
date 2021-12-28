@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2021_12_01_000624) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "snapshots", force: :cascade do |t|
     t.integer "wallet_id"
     t.decimal "bitcoin"
@@ -19,7 +22,7 @@ ActiveRecord::Schema.define(version: 2021_12_01_000624) do
     t.decimal "tether"
     t.decimal "cardano"
     t.decimal "solana"
-    t.integer "unix"
+    t.bigint "unix"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

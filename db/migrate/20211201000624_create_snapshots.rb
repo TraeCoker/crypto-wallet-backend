@@ -7,7 +7,7 @@ class CreateSnapshots < ActiveRecord::Migration[6.1]
       t.decimal :tether
       t.decimal :cardano
       t.decimal :solana
-      t.integer :unix
+      t.bigint :unix
 
       t.timestamps
     end
